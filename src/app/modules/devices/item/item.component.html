@@ -2,7 +2,7 @@
   inViewport
   [inViewportOptions]="{ threshold: [0] }"
   (inViewportAction)="onIntersection($event)">
-  <a mat-card *ngIf="imageBlobUrl;else loading" routerLink="/devices/{{ device.id }}">
+  <a mat-card *ngIf="imageBlobUrl;else loading" routerLink="/devices/{{ device.id }}" class="item">
     <img mat-card-image src="{{ imageBlobUrl }}" class="thumbnail">
     <mat-grid-tile-footer class="footer">デバイスID：<br>{{ device.id }}</mat-grid-tile-footer>
   </a>
