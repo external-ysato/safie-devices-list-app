@@ -14,11 +14,23 @@ export const environment = {
 $ npm i
 $ ng serve -o
 ```
+
 ## ルーティング
 ```
 /devices -> デバイス一覧画面(/からリダイレクトされるようになっています)
 /devices/[device_id] -> 動画再生画面
 ```
+
+## 画面説明
+### 一覧画面
+<img src="https://user-images.githubusercontent.com/32917740/74133502-0c7cd100-4c2c-11ea-9376-f0a60ab5a136.png" width="500">
+
+### 一覧画面(表示設定ダイアログ)
+<img src="https://user-images.githubusercontent.com/32917740/74133248-8b253e80-4c2b-11ea-90fa-847966c11dbf.png" width="500">
+
+### 動画再生画面
+<img src="https://user-images.githubusercontent.com/32917740/74133282-98dac400-4c2b-11ea-8287-ce06c7705946.png" width="500">
+
 ## ファイル構成(以下全てsrc/app以下)
 ### モジュール
 #### app.module.ts
