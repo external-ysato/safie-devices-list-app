@@ -68,7 +68,7 @@ export class ListComponent implements OnInit {
   private getDevices(): void {
     this.deviceService.getDevices()
       .subscribe(response => {
-        this.devices = response.record.map(d => ({ id: d.device_id })).slice(0, 100);
+        this.devices = response.record.map(d => ({ id: d.device_id }));
       });
   }
 
