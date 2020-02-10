@@ -1,0 +1,12 @@
+<div
+  inViewport
+  [inViewportOptions]="{ threshold: [0] }"
+  (inViewportAction)="onIntersection($event)">
+  <a mat-card *ngIf="imageBlobUrl;else loading" routerLink="/devices/{{ device.id }}">
+    <img mat-card-image src="{{ imageBlobUrl }}" class="thumbnail">
+    <mat-grid-tile-footer class="footer">デバイスID：<br>{{ device.id }}</mat-grid-tile-footer>
+  </a>
+  <ng-template #loading>
+    <mat-progress-spinner diameter="30" color="warn" mode="indeterminate"></mat-progress-spinner>
+  </ng-template>
+</div>

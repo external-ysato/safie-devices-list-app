@@ -28,7 +28,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/custom-theme.scss",
+              "src/styles.sass",
+              "node_modules/video.js/dist/video-js.min.css"
             ],
             "scripts": []
           },
@@ -124,6 +126,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "safie-devices-list"
 }

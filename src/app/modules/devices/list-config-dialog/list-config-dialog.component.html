@@ -1,0 +1,41 @@
+<h1 mat-dialog-title>表示設定</h1>
+<div mat-dialog-content>
+  <p>表示する行、列を設定できます</p>
+  <div>
+    <mat-form-field>
+      <mat-label>列</mat-label>
+      <mat-select #col [value]="data.list.col">
+        <mat-option *ngFor="let col of data.displayConfig.col.range" [value]="col">
+          {{ col }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <mat-label>行</mat-label>
+      <mat-select #row [value]="data.list.row">
+        <mat-option *ngFor="let row of data.displayConfig.row.range" [value]="row">
+          {{ row === 0 ? '制限なし' : row }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>
+<div mat-dialog-actions align="end">
+  <button
+    mat-button
+    (click)="onCancelDisplayConfigure()">
+    キャンセル
+  </button>
+  <button
+    mat-raised-button
+    mat-dialog-close
+    color="primary"
+    (click)="onSubmitDisplayConfigure({
+      col: col.value,
+      row: row.value
+    })">
+    決定
+  </button>
+</div>

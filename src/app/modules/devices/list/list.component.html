@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <span>デバイス数：{{ devices.length > 0 ? devices.length : '' }}</span>
+  <span class="spacer"></span>
+  <mat-icon (click)="openConfigDialog()" class="config-button">settings</mat-icon>
+</mat-toolbar>
+<div class="list">
+  <mat-grid-list cols="{{ list.col }}" rowHeight="16:9">
+    <mat-grid-tile
+      *ngFor="let device of (
+        list.row === 0 ?
+        devices :
+        devices.slice(0, list.row * list.col))">
+      <devices-item [device]="device"></devices-item>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

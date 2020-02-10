@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+  <a routerLink="/devices" class="back">
+    <mat-icon class="icon">arrow_back</mat-icon>
+  </a>
+  <span>デバイスID：{{ id }}</span>
+</mat-toolbar>
+<div class="wrapper">
+  <div class="inner">
+    <video #player class="video-js vjs-16-9 vjs-big-play-centered video-player" preload="auto" controls></video>
+  </div>
+</div>
