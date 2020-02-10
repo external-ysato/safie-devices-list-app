@@ -66,4 +66,4 @@ localStorageへの値の保存、取得等を管理するサービスです
 #### constants.ts
 定数を定義しているファイルです
 #### modules/devices/device.ts, modules/devices/list.ts
-それぞれデバイス、リストの定義を行っているファイルです
+それぞれデバイス単体、デバイスリストのプロパティの定義を行っているファイルです
